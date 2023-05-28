@@ -23,8 +23,11 @@ public class Sample02_2 {
 		double height = s.nextDouble();						// 매 입력할때마다 실행해야 하는 명령어
 		
 		double weightMin = 0.0, weightMax = 0.0;
-		weightMin = (height*height)*18.5 ;
-		weightMax = (height*height)*23 ;		
+		final double NORMALBMIMIN = 18.5; 	// 상수
+		final double NORMALBMIMAX = 23;		// 상수
+		
+		weightMin = (height*height)*NORMALBMIMIN ;
+		weightMax = (height*height)*NORMALBMIMAX ;		
 		System.out.printf("비만지수가 정상이려면 적절한 몸무게는 %.2f ~ %.2f 사이 입니다.\n",weightMin,weightMax);
 
 	}
