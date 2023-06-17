@@ -5,10 +5,15 @@ public class StudentDemo3 {
 	
 	public static Student[] createStudent(int studentNum) 
 	{
-		return new Student[studentNum];		
+		Student[] s = new Student[studentNum];
+		for (int i = 0; i < studentNum; i++) {
+			s[i] = new Student();
+		}
+		return s;
+//		return new Student[studentNum];  // null point exception
 	}	
 	public static void setJumsu(Student s, int kor, int eng, int math) {
-		s.setKor(kor);s.setKor(eng);s.setKor(math);
+		s.setKor(kor);s.setEng(eng);s.setMath(math);
 		s.setAvg();
 	}	
 	public static void displayStduentInfo(Student[] s) {

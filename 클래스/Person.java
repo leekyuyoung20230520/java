@@ -10,7 +10,7 @@ public class Person {
 	public int getHeight() {
 		return height;
 	}
-	public void setHeight(int height) {		
+	public void setHeight(int height) {
 		this.height = height;
 	}
 	public int getWeight() {
