@@ -7,7 +7,7 @@ public class Person {
 	private String phone;
 	private String address;
 	
-	
+	// Person객체를 구분하는 key는 phone이다.
 	public Person(String name, String phone) {		
 		this.name = name;
 		this.phone = phone;		
@@ -62,8 +62,7 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return Objects.equals(address, other.address) && Objects.equals(name, other.name)
-				&& Objects.equals(phone, other.phone);
+		return Objects.equals(name, other.name)	&& Objects.equals(phone, other.phone);
 	}
 	
 	

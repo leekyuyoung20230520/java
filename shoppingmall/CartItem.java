@@ -10,6 +10,15 @@ public class CartItem {
 	private int totalPrice;
 	private int quantity;	
 	
+	
+	public void displayItems() {
+		for (int i = 0; i < itemBook.length; i++) {
+			if(itemBook[i]!=null) {
+				System.out.println(itemBook[i]);
+			}
+		}
+	}
+	
 	/*
 	 * 장바구니 추가
 	 * 1. 배열이 꽉 차이 있염 오류를 발생하고 중지한다
@@ -21,17 +30,18 @@ public class CartItem {
 		if(itemBook.length == quantity) {
 			System.out.println("full cart");
 			return;
-		}
-		totalPrice += book.getPrice();
-		
+		}				
 		for (int i = 0; i < itemBook.length; i++) {
 			if(itemBook[i] == null) {
 				itemBook[i] = book;
+				totalPrice += book.getPrice();
 				quantity++;
 				break;
 			}
-		}
-		
+		}		
+	}
+	private Book findBookByID(String id) {
+		return null;
 	}
 	/*
 	 * 카트에서 상품제거
