@@ -24,10 +24,40 @@ public class Demo {
 //		
 //		System.out.println(p);
 		
-		Company[] ary = {
-				new Company("A","korea",100),
-				new Company("B","America",200)
-				};
+//		Company[] ary = {
+//				new Company("A","korea",100),
+//				new Company("B","America",200)
+//				};
+		
+//		Employee e = new Employee("kim","manager",2000);
+//		Employee.staticMetod();  // static method called
+//		e.getName(); // non static method called
+//		e.getSlary();
+//		System.out.println(Employee.publicMoney);
+//		Employee.publicMoney = 0;
+//		
+//		Employee e2 = new Employee("lee","staff",1000);
+//		e2.getName();
+//		Employee.staticMetod();  // static method called
+//		e2.getSlary();
+//		System.out.println(Employee.publicMoney);
+		
+		SingleTone a = SingleTone.getInstance();
+		
+		SingleTone a2 = SingleTone.getInstance();
+		a2.data1 = 100;
+		a2.data2 = 200;		
+		
+		SingleTone a3 = SingleTone.getInstance();
+		
+		
+		System.out.println(a);
+		System.out.println(a2);
+		System.out.println(a3);
+		
+		
+		
+		
 		
 		
 		

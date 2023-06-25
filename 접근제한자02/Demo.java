@@ -8,7 +8,5 @@ public class Demo {
 		// private은 안됨
 		ClassA a = new ClassA();
 		System.out.println(a.a_1);
-		
-	
 	}
 }

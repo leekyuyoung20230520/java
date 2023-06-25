@@ -7,7 +7,7 @@ public class Sample06 {
 		String grade = s.next(); // 키보드 값 그대로 입력
 		switch (grade) {
 		case "A":
-//			System.out.println("매우 우수");
+//			System.out.println("매우 우수");			
 //			break;
 		case "B":
 //			System.out.println("우수");

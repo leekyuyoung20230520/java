@@ -8,6 +8,7 @@ public class Cat {
 	private String breed;
 	private String color;
 	
+	public Cat() {}
 	
 	public String getBreed() {
 		return breed;
