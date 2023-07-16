@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;  /*마진 리셋*/
+	padding: 0;  /*패딩 리셋*/
+	box-sizing: border-box;  /*박스 영역은 테두리까지*/
+}
+/*문서에서 태그가 a인 항목에 적용*/
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+/*아이디가 container 인 요소에 디자인 적용*/
+#container{
+	margin: 0 auto;  /*화면 중앙에 배치*/
+	width: 1200px;
+}
