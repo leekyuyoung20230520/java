@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.7.0.min.js"></script>
+        <script>
+            //문서객체 개별 조작
+            $(document).ready(function(){       
+                // h1태그를모두 추출
+                const $header = $('h1');
+                for (let index = 0; index < $header.length; index++) {                    
+                    // 배경색을 적용
+                    if(index %2 ==0){
+                        const element = $header.get(index);
+                        $(element).css('backgroundColor','red')
+                    }
+                    
+                }
+            });
+        </script>        
+    </head>
+    <body>
+        <h1>Header1</h1>
+        <h1>Header2</h1>
+        <h1>Header3</h1>
+        <h1>Header4</h1>
+    </body>
+</html>

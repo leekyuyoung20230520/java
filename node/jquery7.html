@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery-3.7.0.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){	
+			$('img').each(function(index,element){
+				let src = 'https://via.placeholder.com/'+(index+1)*100+'x100';
+				// $(element).attr('src',src);	
+				$(this).attr('src',src);
+			});
+		});
+			
+		
+	</script>
+	<img ></img>
+	<img ></img>
+	<img ></img>
+	<img ></img>
+</body>
+</html>

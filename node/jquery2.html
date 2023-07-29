@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.7.0.min.js"></script>
+        <script>
+            // document.onload = function(){
+            // }
+            $(document).ready(function(){
+                // h1태그
+                $('h1')
+                // hi태그중에서 class속성이 logo인 태그
+                $('h1.logo')
+                // hi태그중에서 id속성이 logo인 태그
+                $('h1#logo')
+                // input태그중에서 type속성이 submit인 태그
+                $('input[type=submit]')
+                // 객체탐색 부모노드
+                $('h1').parent()
+                // 자식탐색 부모노드  h1태그중에서 내부에 i태그를 찾는다
+                $('h1').find('i')
+                
+        });
+        </script>        
+    </head>
+    <body>
+        <h1></h1>
+        <h1 class="log"></h1>
+        <h1 id="log"></h1>
+        <input type="submit" value="전달">
+    </body>
+</html>

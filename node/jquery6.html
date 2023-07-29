@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery-3.7.0.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('.text-1').text('안녕하세요');
+			$('.text-2').html('반갑습니다.');
+			$('h1').css('color','red');
+			$('.text-2').css({
+				color:'blue',
+				backgroundColor:'orange'
+			})
+		});
+			
+		
+	</script>
+	<h1 class = 'text-1'>TESTA</h1>
+	<h1 class = 'text-1'>TESTA</h1>
+	<p class = 'text-2'>TESTB</p>
+	<p class = 'text-2'>TESTB</p>
+</body>
+</html>
