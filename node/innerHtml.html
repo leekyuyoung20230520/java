@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>문서객체조작</title>
+        <script>
+            let originalText = "";
+            window.onload = ()=>{
+                const header = document.getElementById('header');
+                originalText = header.innerHTML;
+                header.innerHTML = '자바스크립트로 변경했어요!<br/>'                
+            }   
+
+            rollback = ()=>{
+                const header = document.getElementById('header');
+                header.innerHTML = originalText;
+            }            
+        </script>
+    </head>
+    <body>
+        <h1 id="header">header 1</h1>
+        <h1 >header 2</h1>
+        <button onclick="rollback()">원래대로 돌리기</button>
+    </body>
+</html>

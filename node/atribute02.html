@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            window.onload = ()=>{          
+                // 속성 지정
+                document.body.setAttribute('data-role','value')     
+
+                // 속성 추출
+                const dataCustom = document.body.getAttribute('data-role');                
+                alert(dataCustom);                                         
+                const dataDiv = document.querySelector('div').getAttribute('data-role');
+                alert(dataDiv);
+            };                                     
+        </script>
+    </head>
+    <body>
+        <div data-role = 'page'>
+            <div data-role="header"></div>
+            <div data-role="content"></div>
+            <div data-role="footer"></div>
+        </div>
+    </body>
+</html>
