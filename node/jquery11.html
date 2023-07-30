@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery-3.7.0.min.js"></script>
+<script>
+	// 각각의 h1을 클리기했을때 다른 이벤트를 적용
+	// 이벤트핸들러(콜백함수) 어떤 h1이 클릭되었는지 구분
+	// 클로저 사용
+	$(document).ready(function(){
+		$('h1').each(function(){
+			let h1Text = $(this).text();
+			$(this).on('click',function(){
+				$('<h1></h1>').text(h1Text + 'clicked')
+				.appendTo('body');
+			});
+		});
+		
+	});
+</script>
+</head>
+<body>
+	
+<h1>header</h1>
+</body>
+</html>

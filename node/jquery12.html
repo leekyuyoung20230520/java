@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery-3.7.0.min.js"></script>
+<script>	
+	$(document).ready(function(){
+		const handler = function(){		
+			// h1태그를 이용해서 body태그에 추가			
+			$('<h1></h1>').text('TEST')
+			.on('click',handler)
+			.appendTo('body');			
+		}
+		
+		// h1태그에 click이벤트를 연결
+		$('h1').on('click',handler);
+		
+	});
+</script>
+</head>
+<body>
+	
+<h1>header</h1>
+</body>
+</html>

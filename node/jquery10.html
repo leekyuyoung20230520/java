@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery-3.7.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		/*$('h1').on('click',function(){
+			$('<h1></h1>').text( $(this).text() )
+			.appendTo('body');
+		});*/
+		// 이벤트 위임
+		$('body').on('click','h1',function(){
+			$('<h1></h1>').text( $(this).text() )
+			.appendTo('body');
+		});
+		
+	});
+</script>
+</head>
+<body>
+	
+<h1>header</h1>
+</body>
+</html>

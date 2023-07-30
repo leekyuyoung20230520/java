@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./jquery-3.7.0.min.js"></script>
+</head>
+<body>
+	<h1>5</h1>
+	<h1>6</h1>
+	<h1>7</h1>
+	<h1>8</h1>
+	<h1>9</h1>
+	
+	<script>
+		const ary = [11,12,13,14,15];
+		ary.forEach(function(element,index){
+			console.log(element);
+		});
+		
+		$('h1').each(function(index, element){
+			console.log(element.innerHTML);
+		});
+	</script>
+</body>
+</html>
