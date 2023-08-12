@@ -11,10 +11,10 @@
 <meta charset="UTF-8">
 </head>
 <body>
-	<%
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
-		String name = request.getParameter("name");
+	<%		 
+		String id = (request.getParameter("id") != "")? request.getParameter("id") : null;
+		String password = (request.getParameter("password") != "")? request.getParameter("password") : null; 
+		String name = (request.getParameter("name") != "")? request.getParameter("name"): null;
 		// 데이터베이스 드라이버로드
 		// 접속
 		// 쿼리를 실행할 객체
