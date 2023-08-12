@@ -3,9 +3,9 @@ use mysns;
 
 drop table if exists user;
 create table if not exists user(
-	id varchar(128) primary key,
-    password varchar(32),
-    name varchar(32),
+	id varchar(128) primary key not null,
+    password varchar(32) not null,
+    name varchar(32) not null,
     ts timestamp default current_timestamp
 );
 
@@ -38,6 +38,8 @@ delete from user where name  = '일이삼';
 -- 업데이트 
 update user set password = '000' where name like '%삼%';
 
+select * from user;
+
 
 -- 조회-정렬(기본이 오름차순)
 select * from user order by name;
@@ -54,3 +56,5 @@ select * from user,feed where user.id = feed.id;
 -- join연산 정렬... id  순으로
 select * from user,feed where user.id = feed.id order by user.id;
 
+
+select count(*) ctn from user where id = '111@111.com' and password = '1111';
