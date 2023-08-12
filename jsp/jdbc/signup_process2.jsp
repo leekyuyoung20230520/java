@@ -1,4 +1,3 @@
-<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -23,14 +22,14 @@
 		// 자원 순차적으로 close
 		
 		Class.forName("com.mysql.jdbc.Driver");		
-		Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:4406/mysns?serverTimezone=Asia/Seoul", "root", "admin1234");
-		String sql = "insert into user(id,password,name) values(?,?,?)";
-		PreparedStatement pstmt =  conn.prepareStatement(sql);
-		// index start 1.....(not 0)
-		pstmt.setString(1, id);pstmt.setString(2, password);pstmt.setString(3, name);						
-		int result = pstmt.executeUpdate();		
-		out.print(result+" insert 되었습니다.");
-		pstmt.close();conn.close();
+		Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:4406/mysns?serverTimezone=Asia/Seoul", "root", "admin1234");		
+		Statement stmt =  conn.createStatement();
+		String sql = "insert into user(id,password,name) values(";
+		sql += "'" + id +"',";
+		sql += "'" + password +"',";
+		sql += "'" + name +"');";				
+		int result = stmt.executeUpdate(sql);		
+		out.print(result+" insert 되었습니다.");			
 	%>
 	<p><a href="main.jsp">메인으로 돌아가기</a></p>
 </body>

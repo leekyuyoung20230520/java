@@ -29,7 +29,7 @@
 		window.location.href = 'select.jsp';
 	};
 	function deletef(){
-		window.location.href = 'select.jsp';
+		window.location.href = 'delete.jsp';
 	};
 </script>
 
@@ -38,7 +38,7 @@
 		<button type="button" class="btn btn-primary" onclick="insertf()">회원가입</button>		
 		<button type="button" class="btn btn-secondary" onclick="selectf()">조회</button>		
 		<button type="button" class="btn btn-success">업데이트</button>
-		<button type="button" class="btn btn-danger">삭제</button>
+		<button type="button" class="btn btn-danger" onclick="deletef()">삭제</button>
 		<!-- <button type="button" class="btn btn-warning">Warning</button>
 		<button type="button" class="btn btn-info">Info</button>
 		<button type="button" class="btn btn-light">Light</button>
