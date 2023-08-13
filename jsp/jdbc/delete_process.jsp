@@ -15,7 +15,7 @@
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
 
-	Class.forName("com.mysql.jdbc.Driver");		
+	Class.forName("com.mysql.cj.jdbc.Driver");		
 	Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:4406/mysns?serverTimezone=Asia/Seoul", "root", "admin1234");
 	String sql = "select * from user where id = ? and password = ?";
 	PreparedStatement pstmt =  conn.prepareStatement(sql);

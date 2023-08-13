@@ -1,3 +1,4 @@
+<%@page import="com.jspproject.conn.ConnectionPool"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -11,10 +12,10 @@
 <meta charset="UTF-8">
 </head>
 <body>
-	<%
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
-		String name = request.getParameter("name");
+	<%		 
+		String id = (request.getParameter("id") != "")? request.getParameter("id") : null;
+		String password = (request.getParameter("password") != "")? request.getParameter("password") : null; 
+		String name = (request.getParameter("name") != "")? request.getParameter("name"): null;
 		// 데이터베이스 드라이버로드
 		// 접속
 		// 쿼리를 실행할 객체
@@ -22,8 +23,9 @@
 		// 쿼리 실행
 		// 자원 순차적으로 close
 		
-		Class.forName("com.mysql.jdbc.Driver");		
-		Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:4406/mysns?serverTimezone=Asia/Seoul", "root", "admin1234");
+		//Class.forName("com.mysql.cj.jdbc.Driver");		
+		//Connection conn =  DriverManager.getConnection("jdbc:mysql://localhost:4406/mysns?serverTimezone=Asia/Seoul", "root", "admin1234");
+		Connection conn = ConnectionPool.get();
 		String sql = "insert into user(id,password,name) values(?,?,?)";
 		PreparedStatement pstmt =  conn.prepareStatement(sql);
 		// index start 1.....(not 0)
