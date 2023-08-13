@@ -23,6 +23,7 @@
       <th scope="col">패스워드</th>
       <th scope="col">이름</th>
       <th scope="col">시간</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -39,13 +40,22 @@
 	String str = "";
 	int count = 1;
 	while(rs.next()){    
-	str += "<tr>";
-	str +=  "<th scope=\"row\">"+ count++  +"</th>";
-	str +=   "<td>"+ rs.getString("id") +  "</td>";
-	str +=   "<td>"+ rs.getString("password") +  "</td>";
-	str +=   "<td>"+ rs.getString("name") +  "</td>";
-	str +=   "<td>"+ rs.getTimestamp("ts") +  "</td>";
-	str += "</tr>";
+		String id = rs.getString("id");
+		String psw = rs.getString("password");
+		String name = rs.getString("name");
+		
+		str += "<tr><form action = \"signup.jsp\" method=\"post\" >";
+		str +=  "<th scope=\"row\">"+ count++  +"</th>";
+		str +=   "<td>"+ id +  "</td>";
+		str +=   "<td>"+ psw +  "</td>";
+		str +=   "<td>"+ name +  "</td>";
+		str +=   "<td>"+ rs.getTimestamp("ts") +  "</td>";		
+		str +=   "<td><button type=\"submit\" class=\"btn btn-success\">수정</button></td>";
+		str += " <input type=\"hidden\" name=\"id\" value=\""+id+"\">";
+		str += " <input type=\"hidden\" name=\"password\" value=\""+psw+"\">";
+		str += " <input type=\"hidden\" name=\"name\" value=\""+name+"\">";
+		str += " <input type=\"hidden\" name=\"type\" value=\"modify\" >";
+		str += "</tr></form>";
 	}	
 	out.print(str);
 	rs.close();stmt.close();conn.close();
