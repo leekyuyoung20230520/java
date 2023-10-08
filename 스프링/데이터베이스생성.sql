@@ -36,3 +36,21 @@ CREATE TABLE tbl_user_member(
 	);
     
     select * from tbl_user_member;
+
+
+CREATE TABLE tbl_book(
+	b_no			INT 	AUTO_INCREMENT, -- pk 자동증가 	
+	b_thumbnail		VARCHAR(100),   		-- 표지 이미지	
+	b_name			VARCHAR(30) 	NOT NULL, -- 도서 이름
+    	b_author		VARCHAR(20) 	NOT NULL, -- 저자 이름
+    	b_publisher		VARCHAR(20) 	NOT NULL, -- 출판사
+    	b_publisher_year	char(4) 	NOT NULL, -- 출판년도
+    	b_isbn			VARCHAR(30) 	NOT NULL, -- ISBN
+    	b_call_number	VARCHAR(30) 	NOT NULL, -- 청구기호
+    	b_rental_able	tinyint 	NOT NULL default 1, -- 청구기호    		
+	b_reg_date 	DATETIME, 					-- 등록일
+	b_mod_date	DATETIME, 					-- 수정일
+	PRIMARY KEY(b_no)
+	);
+    
+    select * from tbl_book;
