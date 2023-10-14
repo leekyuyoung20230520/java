@@ -49,7 +49,7 @@ CREATE TABLE tbl_book(
     b_publish_year	char(4) 	NOT NULL, -- 출판년도
     b_isbn				VARCHAR(30) 	NOT NULL, -- ISBN
     b_call_number		VARCHAR(30) 	NOT NULL, -- 청구기호
-    b_rental_able		tinyint 	NOT NULL default 1, -- 청구기호    		
+    b_rantal_able		tinyint 	NOT NULL default 1, -- 청구기호    		
 	b_reg_date 			DATETIME, 					-- 등록일
 	b_mod_date			DATETIME, 					-- 수정일
 	PRIMARY KEY(b_no)
