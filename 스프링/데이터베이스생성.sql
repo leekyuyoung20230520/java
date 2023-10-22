@@ -56,3 +56,15 @@ CREATE TABLE tbl_book(
 	);
     
     select * from tbl_book;
+
+drop table if exists tbl_rental_book;
+    CREATE TABLE tbl_rental_book(
+	rb_no		INT 	AUTO_INCREMENT, 	-- 대출번호 pk
+    b_no		INT 	, 				 -- 도서정보
+    u_m_no		INT 	, 				-- 사용자 정보	
+	rb_start_date 	DATETIME default '1000-01-01',  			-- 대출일
+	rb_end_date	DATETIME,      			-- 반납일check
+    rb_reg_date 	DATETIME, 			-- 등록일
+	rb_mod_date	DATETIME,      			-- 수정일
+	PRIMARY KEY(rb_no)
+	);
